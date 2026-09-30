@@ -1,6 +1,11 @@
 import java.util.Scanner;
 
 public class Fibonacci {
+
+    public static int calcularProximo(int a, int b) {
+        return a + b;
+    }
+
     public static void main(String[] args) {
 
         Scanner teclado = new Scanner(System.in);
@@ -16,7 +21,7 @@ public class Fibonacci {
         for (int i = 0; i < n; i++) {
             System.out.print(a + " ");
 
-            proximo = a + b;
+            proximo = calcularProximo(a, b);
             a = b;
             b = proximo;
         }

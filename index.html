@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laboratório de Algoritmos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <p class="eyebrow">Algoritmos Fundamentais · Entregável 1</p>
+    <h1>Execute e veja o resultado.</h1>
+    <p class="intro">Uma interface para testar os seis exercícios do projeto diretamente no navegador.</p>
+    <label class="language-picker" for="language">Executar em
+      <select id="language" name="language"><option value="javascript">JavaScript</option><option value="java">Java</option></select>
+    </label>
+  </header>
+
+  <main class="algorithms">
+    <section class="card" aria-labelledby="fibonacci-title">
+      <div class="card-heading"><span class="number">01</span><div><h2 id="fibonacci-title">Fibonacci</h2><p>Gera os primeiros termos da sequência.</p></div></div>
+      <form data-algorithm="fibonacci"><label for="fib-n">Quantidade de termos</label><input id="fib-n" name="n" type="number" min="0" value="10" required /><button>Gerar sequência <span>→</span></button></form>
+      <output aria-live="polite">Aguardando uma quantidade de termos.</output>
+    </section>
+
+    <section class="card" aria-labelledby="mdc-title">
+      <div class="card-heading"><span class="number">02</span><div><h2 id="mdc-title">MDC</h2><p>Calcula o máximo divisor comum.</p></div></div>
+      <form data-algorithm="mdc"><div class="field-row"><label for="mdc-a">Primeiro número<input id="mdc-a" name="a" type="number" value="48" required /></label><label for="mdc-b">Segundo número<input id="mdc-b" name="b" type="number" value="18" required /></label></div><button>Calcular MDC <span>→</span></button></form>
+      <output aria-live="polite">Informe dois números inteiros.</output>
+    </section>
+
+    <section class="card" aria-labelledby="primo-title">
+      <div class="card-heading"><span class="number">03</span><div><h2 id="primo-title">Número primo</h2><p>Verifica se um número é primo.</p></div></div>
+      <form data-algorithm="primo"><label for="prime-n">Número inteiro</label><input id="prime-n" name="n" type="number" value="17" required /><button>Verificar número <span>→</span></button></form>
+      <output aria-live="polite">Aguardando um número.</output>
+    </section>
+
+    <section class="card" aria-labelledby="ordenacao-title">
+      <div class="card-heading"><span class="number">04</span><div><h2 id="ordenacao-title">Ordenação</h2><p>Ordena valores usando QuickSort.</p></div></div>
+      <form data-algorithm="ordenacao"><label for="sort-values">Números separados por espaço ou vírgula</label><input id="sort-values" name="values" value="9, 2, 7, 1, 5, 3" required /><button>Ordenar valores <span>→</span></button></form>
+      <output aria-live="polite">Informe uma lista de números.</output>
+    </section>
+
+    <section class="card" aria-labelledby="somatorio-title">
+      <div class="card-heading"><span class="number">05</span><div><h2 id="somatorio-title">Somatório</h2><p>Soma todos os valores informados.</p></div></div>
+      <form data-algorithm="somatorio"><label for="sum-values">Números separados por espaço ou vírgula</label><input id="sum-values" name="values" value="10, 20, 30, 40" required /><button>Calcular soma <span>→</span></button></form>
+      <output aria-live="polite">Informe uma lista de números.</output>
+    </section>
+
+    <section class="card" aria-labelledby="contagem-title">
+      <div class="card-heading"><span class="number">06</span><div><h2 id="contagem-title">Contagem</h2><p>Conta valores entre 1 e N.</p></div></div>
+      <form data-algorithm="contagem"><label for="count-n">Quantidade de valores (N)</label><input id="count-n" name="n" type="number" min="1" value="5" required /><label for="count-values">Informe exatamente N valores</label><input id="count-values" name="values" value="1, 7, 3, 5, 0" required /><button>Contar valores <span>→</span></button></form>
+      <output aria-live="polite">Informe N e uma lista de valores.</output>
+    </section>
+  </main>
+
+  <footer>Execute os seis exercícios em JavaScript ou Java.</footer>
+  <script src="app.js"></script>
+</body>
+</html>
